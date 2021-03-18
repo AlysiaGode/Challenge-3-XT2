@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+   	<!-- Zorgt dat de content zich schaalt aan de browser van het apparaat -->
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aly's live dashboard</title>
+	<link rel="stylesheet" type="text/css" href="gridlayout.css">
+	<link rel="stylesheet" type="text/css" href="main.css">	
+	<script src="https://kit.fontawesome.com/90d75487c4.js" crossorigin="anonymous"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+   	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="grid-container">
+		<div id="earthGlobe" class="grid-item">
+			<div id="earth">
+				<model-viewer id="spaceShip" src="Fotos/earthmodel/scene.gltf" auto-rotate camera-controls></model-viewer>
+			</div>
+		</div>
+		<div id="cities" class="grid-item">
+			<div id="cityOne" class="city styleContainer"></div>
+			<div id="cityTwo"class="city styleContainer"></div>
+			<div id="cityThree"class="city styleContainer"></div>
+		</div>
+		<div id="sun" class="grid-item">
+			<div id="sunRise" class="sunTime styleContainer"></div>
+			<div id="sunSet" class="sunTime styleContainer"></div>
+		</div>
+		<div id="globalData" class="grid-item">
+			<div id="time" class="data styleContainer"></div>
+			<div id="icon" class="data styleContainer"></div>
+			<div id="degrees" class="data styleContainer"></div>
+		</div>
+		<div id="weather" class="grid-item">
+			<div id="wind" class="picture styleContainer"></div>
+			<div id="rain" class="picture styleContainer"></div>
+		</div>
+	</div>
+</body>
+</html>
