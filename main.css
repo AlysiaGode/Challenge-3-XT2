@@ -10,29 +10,68 @@
 }
 
 body {
-	color: white;
 	width: 100%;
 	height: 100%;
+	margin: 0px;
 }
 
 #earthGlobe {
 	grid-area: earthGlobe;
+	background-color: pink;
 }
 
 #cities {
 	grid-area: cities;
+	background-color: lightgreen;
+	padding-top: 10px;
+}
+
+#city {
+	grid-area: city;
+	background-color: blue;
+	padding-top: 5px;
 }
 
 #sun {
 	grid-area: sun;
+	background-color: yellow;
+	padding-top: 5px;
 }
 
 #globalData {
 	grid-area: globalData;
+	background-color: purple;
+	padding-top: 15px;
 }
 
 #weather {
 	grid-area: weather;
+	background-color: lightblue;
+	padding-top: 20px;
+}
+
+#earth {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+model-viewer {
+   	width: 200px;
+   	height: 200px;
+   	margin: 0px auto;
+   	top: 50px;
+   	border-radius: 100%;
+}
+
+#cityOne, #cityTwo, #cityThree {
+	border-radius: 2%;
+}
+
+.city {
+	height: 50px;
+	width: 250px;
+	margin: 0px auto;
 }
 
 .styleContainer {
@@ -41,13 +80,208 @@ body {
 	border-radius: 5%;
 }
 
-model-viewer {
-   	width: 500px;
-   	height: 500px;
-   	margin: 0px auto;
+#cityPicture {
+	height: 100px;
+	width: 150px;
+	margin: 0px auto;
 }
 
-.nested {
+.sunTime {
+	width: 70px;
+	height: 100px;
+	margin: 0px auto;
+} 
+
+.data {
+	width: 95px;
+	height: 80px;
+	margin: 0px auto;
+}
+
+.picture {
+	width: 150px;
+	height: 100px;
+	margin: 0px auto;
+}
+
+.nested3Row {
   	display: grid;
+  	grid-template-rows: repeat(3, 1fr);
+}
+
+.nested2Column, .nested2Column2 {
+	display: grid;
   	grid-template-columns: repeat(2, 1fr);
+}
+
+.nested3Column {
+	display: grid;
+  	grid-template-columns: repeat(3, 1fr);
+}
+
+/*--------------------------------------------------------Tablet--768px--------------------------------------------*/
+@media only screen and (min-width: 768px) {
+	body {
+		overflow: hidden;
+	}
+
+	model-viewer {
+		width: 300px;
+		height: 300px;
+		top: 130px;
+	}
+
+	#cities {
+		padding-top: 30px;
+	}
+
+	#city {
+		padding-top: 15px;
+	}
+
+	#sun {
+		padding-top: 15px;
+	}
+
+	#globalData {
+		padding-top: 15px;
+	}
+
+	#weather {
+		padding-top: 15px;
+	}
+
+	.city {
+		height: 50px;
+		width: 250px;
+		margin: 0px auto;
+	}
+
+	.styleContainer {
+		box-shadow: 0px 2px 10px #01050e;
+		background-color: #0b1a47; 
+		border-radius: 5%;
+	}
+
+	#cityPicture {
+		height: 250px;
+		width: 350px;
+		margin: 0px auto;
+	}
+
+	.sunTime {
+		width: 100px;
+		height: 125px;
+		margin: 0px auto;
+	} 
+
+	.data {
+		width: 95px;
+		height: 80px;
+		margin: 0px auto;
+	}
+
+	.picture {
+		width: 250px;
+		height: 116px;
+		margin: 0px auto;
+	}
+
+	.nested2Column, .nested2Column2 {
+		display: grid;
+	  	grid-template-columns: none;
+	  	grid-template-rows: repeat(2, 1fr);
+	}
+
+	.nested3Column {
+		display: grid;
+	  	grid-template-columns: none;
+	  	grid-template-rows: repeat(3, 1fr);
+	}
+
+}
+/*--------------------------------------------------------Laptop--1440px--------------------------------------------*/
+@media only screen and (min-width: 1440px) {
+	model-viewer {
+		height: 500px;
+		width: 500px;
+		top: 190px;
+	}
+
+	#cities {
+		padding-top: 65px;
+	}
+
+	#city {
+		padding-top: 30px;
+	}
+
+	#sun {
+		padding-top: 60px;
+	}
+
+	#globalData {
+		padding-top: 15px;
+	}
+
+	#weather {
+		padding-top: 15px;
+	}
+
+	.city {
+		height: 50px;
+		width: 250px;
+		margin: 0px auto;
+	}
+
+	.styleContainer {
+		box-shadow: 0px 2px 10px #01050e;
+		background-color: #0b1a47; 
+		border-radius: 5%;
+	}
+
+	#cityPicture {
+		height: 220px;
+		width: 320px;
+		margin: 0px auto;
+	}
+
+	.sunTime {
+		width: 150px;
+		height: 175px;
+		margin-top: 30px;
+		margin-left: 20px;
+	} 
+
+	.data {
+		width: 150px;
+		height: 150px;
+		margin-top: 0px;
+		margin-left: 20px;
+		margin-right: 0px;
+	}
+
+	.picture {
+		width: 250px;
+		height: 116px;
+		margin-left: 20px;
+	}
+
+	.nested2Column {
+		display: grid;
+	  	grid-template-rows: none;
+	  	grid-template-columns: repeat(2, 1fr);
+	}
+
+	.nested2Column2 {
+		grid-template-columns: none;
+	  	grid-template-rows: repeat(2, 1fr);
+	}
+
+	.nested3Column {
+		display: grid;
+	  	grid-template-rows: none;
+	  	grid-template-columns: repeat(3, 1fr);
+	}
+
 }

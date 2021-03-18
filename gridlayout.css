@@ -1,27 +1,42 @@
+/*mobile*/
 .grid-container {
 	display: grid; 
 	height: 100vh;
-	grid-template-columns: 1fr;
-	grid-template-rows: 0.5fr 0.7fr 1fr 0.7fr 0.7fr 0.7fr /*0.5fr*/;
+	grid-template-columns: 0.5fr 0.5fr;
+	grid-template-rows: 0.8fr 0.5fr 0.3fr 0.3fr 0.4fr;
 	grid-template-areas: 
-		"head"
-		"systemNav" 
-		"rocket" 
-		"dataDashboard"
-		"navDashboard" 
-		"connections"
+		"earthGlobe earthGlobe"
+		"cities cities" 
+		"city sun" 
+		"globalData globalData"
+		"weather weather" 
 		;
+}
+
+/*tablet*/
+@media only screen and (min-width: 768px) {
+	.grid-container {
+		display: grid; 
+	height: 100vh;
+		grid-template-columns: 0.5fr 0.25fr 0.25fr;
+		grid-template-rows: 0.5fr 0.5fr 0.5fr;
+		grid-template-areas: 
+		"earthGlobe cities cities"
+		"earthGlobe sun globalData"
+		"city weather weather"
+		;
+	}
 }
 
 /*Laptop*/
 @media only screen and (min-width: 1440px) {
 	.grid-container {
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 0.5fr 1fr 2fr /*0.5fr*/;
+		grid-template-columns: 0.45fr 0.25fr 0.3fr;
+		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-areas: 
-			"head head head"
-			"navDashboard rocket dataDashboard"
-			"systemNav rocket connections"
+			"earthGlobe cities sun"
+			"earthGlobe city weather"
+			"earthGlobe globalData globalData"
 			;
 	}
 }

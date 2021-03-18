@@ -15,24 +15,27 @@
 	<div class="grid-container">
 		<div id="earthGlobe" class="grid-item">
 			<div id="earth">
-				<model-viewer id="spaceShip" src="Fotos/earthmodel/scene.gltf" auto-rotate camera-controls></model-viewer>
+				<model-viewer id="modelEarth" src="Fotos/earthmodel/scene.gltf" auto-rotate camera-controls></model-viewer>
 			</div>
 		</div>
-		<div id="cities" class="grid-item">
+		<div id="cities" class="grid-item nested3Row">
 			<div id="cityOne" class="city styleContainer"></div>
 			<div id="cityTwo"class="city styleContainer"></div>
 			<div id="cityThree"class="city styleContainer"></div>
 		</div>
-		<div id="sun" class="grid-item">
+		<div id="city" class="grid-item">
+			<div id="cityPicture" class="styleContainer"></div>
+		</div>
+		<div id="sun" class="grid-item nested2Column">
 			<div id="sunRise" class="sunTime styleContainer"></div>
 			<div id="sunSet" class="sunTime styleContainer"></div>
 		</div>
-		<div id="globalData" class="grid-item">
+		<div id="globalData" class="grid-item nested3Column">
 			<div id="time" class="data styleContainer"></div>
 			<div id="icon" class="data styleContainer"></div>
 			<div id="degrees" class="data styleContainer"></div>
 		</div>
-		<div id="weather" class="grid-item">
+		<div id="weather" class="grid-item nested2Column2">
 			<div id="wind" class="picture styleContainer"></div>
 			<div id="rain" class="picture styleContainer"></div>
 		</div>
