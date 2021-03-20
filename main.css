@@ -1,12 +1,12 @@
 /*Specificeer lettertypes zodat iedere bezoeker hetzelfde ziet*/
 @font-face {
-	font-family: "Marmelad";
-	src: url('Fonts/Marmelad-Regular.ttf') format('truetype');
+	font-family: "EdgeOfTheGalaxyRegular";
+	src: url('Fonts/EdgeOfTheGalaxyRegular.otf') format('opentype');
 }
 
 @font-face {
-	font-family: "SquadaOne";
-	src: url('Fonts/SquadaOne-Regular.ttf') format('truetype');
+	font-family: "MandaloreCondensed";
+	src: url('Fonts/MandaloreCondensed.otf') format('opentype');
 }
 
 body {
@@ -126,6 +126,32 @@ model-viewer {
   	grid-template-columns: repeat(3, 1fr);
 }
 
+#dubbelepunt {
+	text-align: center;
+	font-size: 30px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 25px;
+	opacity: 1;
+}
+
+.timeData {
+	color: white;
+	font-size: 25px;
+	margin-top: 30px;
+	text-align: center;
+	font-family: "EdgeOfTheGalaxyRegular", serif;
+}
+
+.nestedTime {
+	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+}
+
 /*--------------------------------------------------------Tablet--768px--------------------------------------------*/
 @media only screen and (min-width: 768px) {
 	body {
@@ -198,6 +224,12 @@ model-viewer {
 		display: grid;
 	  	grid-template-columns: none;
 	  	grid-template-rows: repeat(3, 1fr);
+	}
+
+	.timeData {
+		color: white;
+		font-size: 25px;
+		text-align: center;
 	}
 
 }
@@ -276,4 +308,28 @@ model-viewer {
 	  	grid-template-columns: repeat(3, 1fr);
 	}
 
+	#dubbelepunt {
+		font-size: 50px;
+		top: 0px;
+		margin-left: -47px;
+		transform: rotate(90deg);
+	}
+
+	.nestedTime {
+		display: grid;
+  		grid-template-rows: repeat(2, 1fr);
+  		grid-template-columns: none;
+	}
+
+	.timeData {
+		color: white;
+		font-size: 40px;
+		margin-top: 20px;
+		margin-bottom: 0px;
+		text-align: center;
+	}
+
+	#timeM {
+		margin-top: 25px;
+	}
 }

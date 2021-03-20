@@ -7,8 +7,9 @@
 	<title>Aly's live dashboard</title>
 	<link rel="stylesheet" type="text/css" href="gridlayout.css">
 	<link rel="stylesheet" type="text/css" href="main.css">	
-	<script src="https://kit.fontawesome.com/90d75487c4.js" crossorigin="anonymous"></script>
-	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://kit.fontawesome.com/90d75487c4.js" crossorigin="anonymous" defer></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" defer></script>
+	<script type="text/javascript" src="vanilla-tilt.js" defer></script>
    	<script src="script.js" defer></script>
 </head>
 <body>
@@ -19,26 +20,33 @@
 			</div>
 		</div>
 		<div id="cities" class="grid-item nested3Row">
-			<div id="cityOne" class="city styleContainer"></div>
-			<div id="cityTwo"class="city styleContainer"></div>
-			<div id="cityThree"class="city styleContainer"></div>
+			<div id="cityOne" class="city styleContainer" data-tilt></div>
+			<div id="cityTwo"class="city styleContainer" data-tilt></div>
+			<div id="cityThree"class="city styleContainer" data-tilt></div>
 		</div>
 		<div id="city" class="grid-item">
-			<div id="cityPicture" class="styleContainer"></div>
+			<div id="cityPicture" class="styleContainer" data-tilt></div>
 		</div>
 		<div id="sun" class="grid-item nested2Column">
-			<div id="sunRise" class="sunTime styleContainer"></div>
-			<div id="sunSet" class="sunTime styleContainer"></div>
+			<div id="sunRise" class="sunTime styleContainer" data-tilt></div>
+			<div id="sunSet" class="sunTime styleContainer" data-tilt></div>
 		</div>
 		<div id="globalData" class="grid-item nested3Column">
-			<div id="time" class="data styleContainer"></div>
-			<div id="icon" class="data styleContainer"></div>
-			<div id="degrees" class="data styleContainer"></div>
+			<div id="time" class="data styleContainer" data-tilt>
+				<div><p id="dubbelepunt" class="timeData">:</p></div>
+				<div class="nestedTime">
+					<p id="timeH" class="timeData"></p>
+					<p id="timeM" class="timeData"></p>
+				</div>
+			</div>
+			<div id="icon" class="data styleContainer" data-tilt></div>
+			<div id="degrees" class="data styleContainer" data-tilt></div>
 		</div>
 		<div id="weather" class="grid-item nested2Column2">
-			<div id="wind" class="picture styleContainer"></div>
-			<div id="rain" class="picture styleContainer"></div>
+			<div id="wind" class="picture styleContainer" data-tilt></div>
+			<div id="rain" class="picture styleContainer" data-tilt></div>
 		</div>
 	</div>
+	
 </body>
 </html>
