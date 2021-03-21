@@ -116,7 +116,7 @@ setInterval(function(){
 
 var slideId = document.getElementById("citySlide");
 var tokyoImages = ["Fotos/tokyo/tokyo1.jpg","Fotos/tokyo/tokyo2.jpg","Fotos/tokyo/tokyo3.jpg"];
-var dubaiImages = ["Fotos/dubai/dubai1.jpg","Fotos/dubai/dubai2.jpg","Fotos/dubai/dubai3.jpg"];
+var dubaiImages = ["Fotos/dubai/dubai1.jfif","Fotos/dubai/dubai2.jpeg","Fotos/dubai/dubai3.jpg"];
 var detroitImages = ["Fotos/detroit/detroit1.jpg","Fotos/detroit/detroit2.jpg","Fotos/detroit/detroit3.jpg"];
 var slide = 0;
 var slideshowCity = tokyoImages;
@@ -131,3 +131,28 @@ function startSlideShow() {
 //zorg dat de foto direct wordt weergeven zonder 2s te wachten
 slideId.src = slideshowCity[slide++];
 startSlideShow();
+
+var tokyo = document.getElementById("tokyo");
+var dubai = document.getElementById("dubai");
+var detroit = document.getElementById("detroit");
+
+tokyo.onclick = function() {
+	tokyo.classList.add("active");
+	dubai.classList.remove("active");
+	detroit.classList.remove("active");
+	slideshowCity = tokyoImages;
+}
+
+dubai.onclick = function() {
+	dubai.classList.add("active");
+	tokyo.classList.remove("active");
+	detroit.classList.remove("active");
+	slideshowCity = dubaiImages;
+}
+
+detroit.onclick = function() {
+	detroit.classList.add("active");
+	dubai.classList.remove("active");
+	tokyo.classList.remove("active");
+	slideshowCity = detroitImages;
+}

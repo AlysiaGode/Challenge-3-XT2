@@ -189,6 +189,34 @@ model-viewer {
 
 }
 
+.active {
+	/*border: 2px solid #ce9ae5;*/
+	/*box-shadow: 0px 2px 10px #ce9ae5;*/
+	background: linear-gradient(to right, rgba(206, 154, 229, 0.8), rgba(143,194,225, 0.8) ,rgba(143,194,225, 0.8) ,rgba(206, 154, 229, 0.8));
+    animation: gradientMove 10s ease-in-out infinite;
+    /*bigger for an moving effect*/
+    background-size: 200%;
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 200% 80%;
+    border: 2px solid rgb(206, 154, 229);
+    box-shadow: 0px 2px 10px rgb(206, 154, 229);
+  }
+  50% {
+    background-position: 100% 80%;
+    border: 2px solid rgb(143,194,225);
+    box-shadow: 0px 2px 10px rgb(143,194,225);
+  }
+  100% {
+    background-position: 0% 80%;
+    border: 2px solid rgb(206, 154, 229);
+    box-shadow: 0px 2px 10px rgb(206, 154, 229);
+  }
+}
+
 /*--------------------------------------------------------Tablet--768px--------------------------------------------*/
 @media only screen and (min-width: 768px) {
 	body {
@@ -382,7 +410,7 @@ model-viewer {
 		width: 70%;
 		height: 80%;
 		margin-left: 20px;
-		margin-top: 17px;
+		margin-top: 25px;
 	}
 
 	#forecastDegrees {
