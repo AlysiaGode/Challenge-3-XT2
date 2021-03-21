@@ -38,26 +38,22 @@ function getAPIdata() {
 function onAPISucces(response) {
 
 	var weatherList = response.list;
-	var weatherBox = document.getElementById('weather');
+	var weatherBoxDegrees = document.getElementById('degrees');
+	var weatherBoxIcon = document.getElementById('icon');
+	var iconForecast;
+	var degreesForecast;
 
 	for(var i=0; i< weatherList.length; i++){
-		//console.log(weatherList[i].main.temp - 273.15);
-
-		var dateTime = new Date(weatherList[i].dt_txt);
-		var date = formDate(dateTime);
-		var time = formTime(dateTime);
+		//calc kelvin to celcius
 		var temp = Math.floor(weatherList[i].main.temp - 273.15);
 		var iconUrl = 'http://openweathermap.org/img/w/'+weatherList[i].weather[0].icon+'.png';
 
-		forecastMessage =  '<div class="forecastMoment">';
-		forecastMessage +=   '<div class="date"> '+date+' </div>';
-		forecastMessage +=	 '<div class="time"> '+ time +' </div>';
-		forecastMessage +=	 '<div class="temp"> '+temp+'&#176;C </div>';
-		forecastMessage +=	 '<div class="icon"> <img src="'+iconUrl+'"> </div>';
-		forecastMessage += '</div>';
+		iconForecast = "<div id='forecastDegrees'>" + temp + '&#176;C </div>';
+		degreesForecast ='<div id=" "> <img id="forecastIcon" src="' + iconUrl + '"> </div>';
 
-		// weatherBox.innerHTML += forecastMessage;
-		console.log(forecastMessage);
+		weatherBoxDegrees.innerHTML = degreesForecast;
+		weatherBoxIcon.innerHTML = iconForecast;
+
 	}
 }
 
@@ -65,11 +61,14 @@ function onAPISucces(response) {
  * Error
  */
 function updateUIError() {
-	var weatherBox = document.getElementById('weather');
-	weatherBox.className = 'hidden'; 
+	var weatherBoxDegrees = document.getElementById('degrees');
+	weatherBoxDegrees.className = 'hidden'; 
+
+	var weatherBoxIcon = document.getElementById('icon');
+	weatherBoxIcon.className = 'hidden'; 
 }
 // init data stream
-// getAPIdata();
+getAPIdata();
 // ----------------------------------------------
 
 //zorg dat alle getallen onder de 10 een 0 krijgen: 01 - 02 - 03 - 04 - 05 - 06 - 07 - 08 - 09
@@ -114,3 +113,21 @@ setInterval(function(){
 setInterval(function(){
 	blink();
 },500);
+
+var slideId = document.getElementById("citySlide");
+var tokyoImages = ["Fotos/tokyo/tokyo1.jpg","Fotos/tokyo/tokyo2.jpg","Fotos/tokyo/tokyo3.jpg"];
+var dubaiImages = ["Fotos/dubai/dubai1.jpg","Fotos/dubai/dubai2.jpg","Fotos/dubai/dubai3.jpg"];
+var detroitImages = ["Fotos/detroit/detroit1.jpg","Fotos/detroit/detroit2.jpg","Fotos/detroit/detroit3.jpg"];
+var slide = 0;
+var slideshowCity = tokyoImages;
+function startSlideShow() {
+	setInterval(function(){
+		slideId.src = slideshowCity[slide++];
+		if (slide == slideshowCity.length) {
+			slide = 0;
+		}
+	},2000)
+}
+//zorg dat de foto direct wordt weergeven zonder 2s te wachten
+slideId.src = slideshowCity[slide++];
+startSlideShow();

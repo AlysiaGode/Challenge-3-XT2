@@ -69,13 +69,20 @@ model-viewer {
 }
 
 #cityOne, #cityTwo, #cityThree {
-	border-radius: 2%;
+	text-align: center;
+	font-family: "EdgeOfTheGalaxyRegular", serif;
+	color: white;
+	font-size: 22px;
+	margin-top: 15px;
+	letter-spacing: 1px;
+
 }
 
 .city {
 	height: 50px;
 	width: 250px;
 	margin: 0px auto;
+	border-radius: 2%;
 }
 
 .styleContainer {
@@ -139,7 +146,7 @@ model-viewer {
 	opacity: 1;
 }
 
-.timeData {
+.timeData, #forecastDegrees {
 	color: white;
 	font-size: 25px;
 	margin-top: 30px;
@@ -150,6 +157,36 @@ model-viewer {
 .nestedTime {
 	display: grid;
   	grid-template-columns: repeat(2, 1fr);
+}
+
+.hidden {
+	display: none;
+}
+
+#forecastIcon {
+	width: 70%;
+	height: 80%;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+#forecastIconBox {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.slideshow {
+	height: 100%;
+	width: 100%;
+}
+
+#citySlide {
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+	border-radius: 5%;
+
 }
 
 /*--------------------------------------------------------Tablet--768px--------------------------------------------*/
@@ -226,11 +263,19 @@ model-viewer {
 	  	grid-template-rows: repeat(3, 1fr);
 	}
 
-	.timeData {
+	.timeData, #forecastDegrees {
 		color: white;
 		font-size: 25px;
 		text-align: center;
 	}
+
+	#forecastIcon {
+		width: 70%;
+		height: 80%;
+		margin-left: 15px;
+		margin-top: 10px;
+	}
+
 
 }
 /*--------------------------------------------------------Laptop--1440px--------------------------------------------*/
@@ -321,7 +366,7 @@ model-viewer {
   		grid-template-columns: none;
 	}
 
-	.timeData {
+	.timeData, #forecastDegrees {
 		color: white;
 		font-size: 40px;
 		margin-top: 20px;
@@ -331,5 +376,16 @@ model-viewer {
 
 	#timeM {
 		margin-top: 25px;
+	}
+
+	#forecastIcon {
+		width: 70%;
+		height: 80%;
+		margin-left: 20px;
+		margin-top: 17px;
+	}
+
+	#forecastDegrees {
+		margin-top: 55px;
 	}
 }
