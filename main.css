@@ -106,6 +106,32 @@ model-viewer {
 	margin: 0px auto;
 } 
 
+.sunTimes, .sunDate {
+	text-align: center;
+	font-family: "EdgeOfTheGalaxyRegular", serif;
+	color: white;
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+
+.sunIcon {
+	height: 80%;
+	width: 80%;
+	margin-left: 7px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.sun {
+	width: 100%;
+	display: block;
+}
+
+.sunDate {
+	font-size: 10px;
+	margin-top: -10px;
+}
+
 .data {
 	width: 95px;
 	height: 80px;
@@ -304,6 +330,19 @@ model-viewer {
 		margin-top: 10px;
 	}
 
+	.sunTimes, .sunDate {
+		font-size: 16px;
+	}
+
+	.sunIcon {
+		margin-left: 10px;
+		margin-bottom: 2px;
+		margin-top: -2px;
+	}
+
+	.sunDate {
+		font-size: 13px;
+	}
 
 }
 /*--------------------------------------------------------Laptop--1440px--------------------------------------------*/
@@ -416,4 +455,17 @@ model-viewer {
 	#forecastDegrees {
 		margin-top: 55px;
 	}
+
+	.sunTimes, .sunDate {
+		font-size: 24px;
+	}
+
+	.sunIcon {
+		margin-left: 15px;
+		margin-bottom: 0px;
+		margin-top: -5px;
+	}
+
+
+
 }
