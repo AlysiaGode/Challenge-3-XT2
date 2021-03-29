@@ -7,10 +7,12 @@
 	<title>Aly's live dashboard</title>
 	<link rel="stylesheet" type="text/css" href="gridlayout.css">
 	<link rel="stylesheet" type="text/css" href="main.css">	
+	<link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
 	<script src="https://kit.fontawesome.com/90d75487c4.js" crossorigin="anonymous" defer></script>
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" defer></script>
 	<script type="text/javascript" src="vanilla-tilt.js" defer></script>
    	<script src="script.js" defer></script>
+   	<script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
 </head>
 <body>
 	<div class="grid-container">
@@ -53,8 +55,12 @@
 			<div id="icon" class="data styleContainer" data-tilt></div>
 		</div>
 		<div id="weather" class="grid-item nested2Column2">
-			<div id="wind" class="picture styleContainer" data-tilt></div>
-			<div id="rain" class="picture styleContainer" data-tilt></div>
+			<div id="wind" class="picture styleContainer" data-tilt>
+				<div id="map"></div>
+			</div>
+			<div id="rain" class="picture styleContainer" data-tilt>
+				<div id="map2"></div>
+			</div>
 		</div>
 	</div>
 	
