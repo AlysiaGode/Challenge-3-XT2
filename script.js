@@ -54,7 +54,7 @@ function onAPISuccesForecast(response) {
 	for(var i=0; i< forecastList.length; i++){
 		//calc kelvin to celcius
 		var temp = Math.floor(forecastList[i].main.temp - 273.15);
-		var iconUrl = 'https://openweathermap.org/img/w/'+forecastList[i].weather[0].icon+'.png';
+		var iconUrl = 'http://openweathermap.org/img/w/'+forecastList[i].weather[0].icon+'.png';
 
 		iconForecast = "<div id='forecastDegrees'>" + temp + '&#176;C </div>';
 		degreesForecast ='<div id=" "> <img id="forecastIcon" src="' + iconUrl + '"> </div>';
@@ -82,6 +82,7 @@ console.log(
 sunSetRise();
 
 }
+
 var unixTimeSet;
 var unixTimeRise;
 var date;
@@ -103,8 +104,8 @@ function sunSetRise() {
 	var sunSet = document.getElementById("sunSet");
 	var sunRiseIcon = "<div class=sun> <img class=sunIcon src='Fotos/sunrise.svg'> </div>";
 	var sunSetIcon = "<div class=sun> <img class=sunIcon src='Fotos/sunset.svg'> </div>";
-	sunRise.innerHTML += sunRiseIcon + '<div class=sunDate>' + addLeadingZero(day) + '-' + addLeadingZero(month) + ' rise: ' + '</div>' + '<div class=sunTimes>' + convertUNIX(unixTimeRise) + ' UTC' + '</div>'
-	sunSet.innerHTML += sunSetIcon + '<div class=sunDate>' + addLeadingZero(day+1) + '-' + addLeadingZero(month) + ' set: ' +  '</div>' + '<div class=sunTimes>' + convertUNIX(unixTimeSet) + ' UTC' + '</div>'
+	sunRise.innerHTML = sunRiseIcon + '<div class=sunDate>' + addLeadingZero(day) + '-' + addLeadingZero(month) + ' rise: ' + '</div>' + '<div class=sunTimes>' + convertUNIX(unixTimeRise) + ' UTC' + '</div>'
+	sunSet.innerHTML = sunSetIcon + '<div class=sunDate>' + addLeadingZero(day+1) + '-' + addLeadingZero(month) + ' set: ' +  '</div>' + '<div class=sunTimes>' + convertUNIX(unixTimeSet) + ' UTC' + '</div>'
 }
 
 /**
@@ -200,7 +201,7 @@ map.on('load', function () {
 
 function plotImageOnMap(icon, city) {
   map.loadImage(
-    'https://openweathermap.org/img/w/' + icon + '.png',
+    'http://openweathermap.org/img/w/' + icon + '.png',
     function (error, image) {
       if (error) throw error;
       map.addImage("weatherIcon_" + city.name, image);
@@ -265,7 +266,7 @@ map2.on('load', function () {
 
 function plotImageOnMap2(icon, city) {
   map2.loadImage(
-    'https://openweathermap.org/img/w/' + icon + '.png',
+    'http://openweathermap.org/img/w/' + icon + '.png',
     function (error, image) {
       if (error) throw error;
       map2.addImage("weatherIcon_" + city.name, image);
@@ -353,7 +354,7 @@ getAPIdataForecast();
 // getAPIdataPrecipitation();
 
 setInterval(function(){
-	// getAPIdataForecast();
+	getAPIdataForecast();
 	// getAPIdataPrecipitation();
 },3000);
 // ----------------------------------------------
@@ -473,7 +474,7 @@ tokyo.onclick = function() {
 
 function plotImageOnMap(icon, city) {
   map.loadImage(
-    'https://openweathermap.org/img/w/' + icon + '.png',
+    'http://openweathermap.org/img/w/' + icon + '.png',
     function (error, image) {
       if (error) throw error;
       map.addImage("weatherIcon_" + city.name, image);
@@ -528,7 +529,7 @@ function plotImageOnMap(icon, city) {
 
 function plotImageOnMap2(icon, city) {
   map2.loadImage(
-    'https://openweathermap.org/img/w/' + icon + '.png',
+    'http://openweathermap.org/img/w/' + icon + '.png',
     function (error, image) {
       if (error) throw error;
       map2.addImage("weatherIcon_" + city.name, image);
@@ -606,7 +607,7 @@ dubai.onclick = function() {
 
 function plotImageOnMap(icon, city) {
   map.loadImage(
-    'https://openweathermap.org/img/w/' + icon + '.png',
+    'http://openweathermap.org/img/w/' + icon + '.png',
     function (error, image) {
       if (error) throw error;
       map.addImage("weatherIcon_" + city.name, image);
@@ -661,7 +662,7 @@ function plotImageOnMap(icon, city) {
 
 function plotImageOnMap2(icon, city) {
   map2.loadImage(
-    'https://openweathermap.org/img/w/' + icon + '.png',
+    'http://openweathermap.org/img/w/' + icon + '.png',
     function (error, image) {
       if (error) throw error;
       map2.addImage("weatherIcon_" + city.name, image);
@@ -739,7 +740,7 @@ map.on('load', function () {
 
 function plotImageOnMap(icon, city) {
   map.loadImage(
-    'https://openweathermap.org/img/w/' + icon + '.png',
+    'http://openweathermap.org/img/w/' + icon + '.png',
     function (error, image) {
       if (error) throw error;
       map.addImage("weatherIcon_" + city.name, image);
