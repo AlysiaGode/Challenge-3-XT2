@@ -356,7 +356,7 @@ getAPIdataForecast();
 setInterval(function(){
 	getAPIdataForecast();
 	// getAPIdataPrecipitation();
-},3000);
+},500);
 // ----------------------------------------------
 
 //zorg dat alle getallen onder de 10 een 0 krijgen: 01 - 02 - 03 - 04 - 05 - 06 - 07 - 08 - 09
