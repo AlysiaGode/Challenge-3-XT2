@@ -26,7 +26,7 @@ function getAPIdataForecast() {
 	
 	// render weather per day
 	.then(function(response) {
-		console.log(response);
+		// console.log(response);
 		// render weatherCondition
 		onAPISuccesForecast(response);
 	})
@@ -67,7 +67,13 @@ function onAPISuccesForecast(response) {
 x = response.city.coord.lat;
 z = parseInt(10);
 y = response.city.coord.lon;
-console.log("lat",x, "long",y);
+	// console.log("lat",x, "long",y);
+	// console.log(
+	// 	addLeadingZero(day), '-' , addLeadingZero(month), ' rise: ',convertUNIX(unixTimeRise), "UTC",
+	// 	addLeadingZero(day)+1, '-', addLeadingZero(month), ' set: ',convertUNIX(unixTimeSet), "UTC"
+	// );
+
+
 // getAPIdataPrecipitation();
 
 date = new Date(); 
@@ -75,10 +81,7 @@ day = date.getDate();
 month = date.getMonth() + 1; 
 unixTimeRise = parseInt(response.city.sunrise);
 unixTimeSet = parseInt(response.city.sunset);
-console.log(
-	addLeadingZero(day), '-' , addLeadingZero(month), ' rise: ',convertUNIX(unixTimeRise), "UTC",
-	addLeadingZero(day)+1, '-', addLeadingZero(month), ' set: ',convertUNIX(unixTimeSet), "UTC"
-			);
+
 sunSetRise();
 
 }
